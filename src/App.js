@@ -83,7 +83,7 @@ function App() {
         <p className="is-4 title has-text-centered">Pet List</p>
         {/* sample table */}
 
-        <ItemTable name={"Coco"} gender={"Male"} age={"5"} />
+        {/* <ItemTable name={"Coco"} gender={"Male"} age={"5"} /> */}
         {items.map((e) => (
           <ItemTable name={e.name} gender={e.gender} age={e.age} />
         ))}
