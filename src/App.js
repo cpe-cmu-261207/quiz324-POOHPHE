@@ -10,16 +10,18 @@ function App() {
   //load locationStorage
   useEffect(() => {
     const items = localStorage.getItem("items");
-    if (items) {
-      console.log(items);
-      const stack = [...items];
-      setItem(stack);
+    if (items != null) {
+      const buffer = items;
+      const data_list = JSON.parse(buffer);
+      setItem(data_list);
     }
+
     // ...
   }, []);
+
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
-  }, [items]);
+  }, [items.length]);
 
   function addName() {
     const fake = [...items];
